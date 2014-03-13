@@ -16,4 +16,12 @@ angular.module('formDummyApp')
 			return addresses;
 		});
 	};
+
+	$scope.userDisplay = [];
+
+	$scope.submit = function (userProfile) {
+		// return $scope.userDisplay.push(userProfile);
+		$scope.userDisplay.push(angular.copy(userProfile));
+	};
+
 });

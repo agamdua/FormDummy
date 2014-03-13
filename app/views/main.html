@@ -18,14 +18,15 @@
   </div>
   </div>
   <div class="form-group">
-    <input type="text" ng-model="asyncSelected" name="location" class="form-control" placeholder="Enter your location" typeahead="address for address in getLocation($viewValue) | filter:$viewValue" typeahead-loading="loadingLocations">
+    <input type="text" ng-model="userProfile.location" name="location" class="form-control" placeholder="Enter your location" typeahead="address for address in getLocation($viewValue) | filter:$viewValue" typeahead-loading="loadingLocations">
     <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
   </div>
   <div class="text-center">
-    <button class="btn btn-default" type="submit">Submit</button>
+    <button class="btn btn-default" type="submit" ng-click="submit(userProfile)">Submit</button>
   </div>
 </form>
 
 <div ng-controller="ListPeopleCtrl">
   {{userProfile.email}}
+  {{userProfile.location}}
 </div>
